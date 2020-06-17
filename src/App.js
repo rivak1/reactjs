@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
-import Layout from './layout/layout';
-import Home from './components/home/home';
-import About from './components/about/about';
-import Dashboard from './components/dashboard/dashboard';
+import Layout from 'user/Layout/layout';
+import Home from 'user/Components/Home/home';
 import { Provider } from 'react-redux';
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-import {axiosAuthMiddleware} from './middleware';
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import {axiosAuthMiddleware} from 'common/middleware';
 import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
 import reduxThunk from 'redux-thunk';
 import logger from 'redux-logger';
 import reducers from './reducers';
-
-
 
 const createStoreWithMiddleware = applyMiddleware(promise, reduxThunk, logger, axiosAuthMiddleware)(
 	createStore
@@ -25,11 +21,7 @@ const store = createStoreWithMiddleware(
 
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-  }
-   render() {
-    console.log(reducers);
+  render() {
     return (
       <Provider store={store}>
         <Router>
@@ -38,11 +30,8 @@ class App extends Component {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/dashboard">
-              <Dashboard />
+            <Route exact path="/home">
+              <Home />
             </Route>
           </Switch>
           </Layout>

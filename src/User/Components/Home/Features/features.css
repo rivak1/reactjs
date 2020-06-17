@@ -1,0 +1,45 @@
+#feature {
+    padding: 20px;
+    padding: 20px;
+    background: url(https://res.cloudinary.com/hg3trlxnt/image/upload/v1592417431/wave_1_unyxhk.svg);
+    background-size: cover;
+    background-position-x: right;
+    background-color: whitesmoke;
+}
+
+#feature .feature-block {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    flex-basis: 0;
+    flex-shrink: 0;
+}
+#feature .text-muted {
+    color:#4c596d !important;
+}
+
+#feature h4 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    color: rgba(0, 0, 0, 0.95);
+    font-weight: 500;
+    
+}
+
+#feature p {
+    font-family: sans-serif;
+    text-align: justify;
+    color: #212529 !important;
+    font-size: 15px;
+    font-weight: lighter;
+    padding: 0;
+}
+
+#feature .feature-block .feature-text-block .desc {
+    font-size: 16px;
+    text-align: justify;
+    font-family: serif;
+    /* font-weight: 600; */
+    color: #000;
+}

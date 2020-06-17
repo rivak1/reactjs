@@ -1,0 +1,15 @@
+#feature {
+    padding: 10px;
+}
+
+#banner img {
+    height: 500px !important;
+}
+
+@media screen and (max-width: 500px){
+    #banner img {
+        height: 300px !important;
+    }
+    
+  }
+  
